@@ -2,6 +2,7 @@ FROM centos:latest
 MAINTAINER Dushyant Khosla <dushyant.khosla@yahoo.com
 
 COPY environment.yml environment.yml
+COPY start.sh /etc/profile.d/
 
 # Install
 RUN yum -y install tmux \
@@ -18,6 +19,7 @@ RUN wget --quiet https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86
 ENV PATH="/miniconda/bin:${PATH}"
 RUN conda config --add channels conda-forge
 RUN conda env create -f environment.yml --quiet
+
 
 # Install latest version of Git
 RUN yum -y remove git \
@@ -48,12 +50,15 @@ RUN yum -y autoremove \
   && yum clean all \
   && rm -rf /var/cache/yum
 
+
+# Copy reference material
+RUN mkdir /home/ts-reference
+
+COPY /data /home/ts-reference/
+COPY /notebooks /home/ts-reference/
+
 # Start Here
-RUN mkdir /home/app-x
-WORKDIR /home/app-x
+WORKDIR /home/
 
-# Activate the Environment
-ENV PATH="/miniconda/envs/ts-env/bin/:${PATH}"
-
-EXPOSE 8008
-CMD /usr/bin/fish
+EXPOSE 8080
+CMD /usr/bin/bash
