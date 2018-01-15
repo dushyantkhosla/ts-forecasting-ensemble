@@ -1,7 +1,7 @@
 name: ts-env
 channels:
-- conda-forge
 - defaults
+- conda-forge
 dependencies:
 - asn1crypto=0.22.0=py36_0
 - blas=1.1=openblas
