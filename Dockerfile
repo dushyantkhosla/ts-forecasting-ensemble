@@ -54,8 +54,8 @@ RUN yum -y autoremove \
 # Copy reference material
 RUN mkdir /home/ts-reference
 
-COPY /data /home/ts-reference/
-COPY /notebooks /home/ts-reference/
+COPY /data /home/ts-reference/data/
+COPY /notebooks /home/ts-reference/notebooks/
 
 # Start Here
 WORKDIR /home/
