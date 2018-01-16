@@ -17,7 +17,7 @@ RUN wget --quiet https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86
   && rm miniconda.sh
 
 ENV PATH="/miniconda/bin:${PATH}"
-RUN conda config --add channels conda-forge
+RUN conda config --append channels conda-forge
 RUN conda env create -f environment.yml --quiet
 
 
