@@ -21,6 +21,11 @@ echo "To start a Jupyter notebook server, run ..."
 echo "-----------------------------------------------------------------"
 echo "jupyter notebook --allow-root --no-browser --ip 0.0.0.0 --port 8080"
 
+echo ""
+echo "Configure git. Run ..."
+echo "-----------------------------------------------------------------"
+echo "git config --global user.email 'you@example.com'"
+echo "git config --global user.name 'Your Name'"
 
 echo ""
 echo ""
