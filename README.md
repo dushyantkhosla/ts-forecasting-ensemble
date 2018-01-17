@@ -14,4 +14,12 @@ Inside the `/home` folder, there are sample data and notebooks with examples on 
 
 ### Run the container
 
-- `docker run -it -p 8080:8080 eadlab/ds-docker-time-series`
+```
+docker run -it -v (pwd):/home \
+               -p 8080:8080 \
+               -p 5000:5000 \
+               -e GIT_USER_NAME="Dushyant Khosla" \
+               -e GIT_USER_MAIL="dushyant.khosla@yahoo.com" \
+               eadlab/ds-docker-time-series
+```
+
