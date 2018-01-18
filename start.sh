@@ -2,8 +2,8 @@
 source activate ts-env
 
 # Configure Git
-git config --global user.email $GIT_USER_NAME
-git config --global user.name $GIT_USER_MAIL
+git config --global user.name $GIT_USER_NAME
+git config --global user.email $GIT_USER_MAIL
 
 # Print information
 echo ""
