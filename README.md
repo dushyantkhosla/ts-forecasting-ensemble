@@ -45,7 +45,7 @@ PS: that ARIMA models assume non-seasonal series, so you'll need to de-seasonali
 
 # Recommended Reading
 
-- [Steps in choosing a forecasting model](http://people.duke.edu/~rnau/411fcst.htm)
+- [Notes on Regression and TS Analysis - Duke Univ](http://people.duke.edu/~rnau/411home.htm)
 - [Rules for identifying ARIMA models](http://people.duke.edu/~rnau/arimrule.htm)
 - [Sean Abu's SARIMAX tutorial](http://www.seanabu.com/2016/03/22/time-series-seasonal-ARIMA-model-in-python/)
 - [Modern Pandas', handling TS + SARIMAX](https://tomaugspurger.github.io/modern-7-timeseries.html)
